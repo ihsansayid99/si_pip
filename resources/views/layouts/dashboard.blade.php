@@ -149,6 +149,7 @@
             </li>
 
             <!-- Layouts -->
+            @if(Auth::user()->role == 'admin')
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
@@ -157,32 +158,25 @@
 
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="layouts-without-menu.html" class="menu-link">
-                    <div data-i18n="Without menu">Without menu</div>
+                  <a href="{{ route('admin.siswa') }}" class="menu-link">
+                    <div data-i18n="Without menu">Data Siswa</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="layouts-without-navbar.html" class="menu-link">
-                    <div data-i18n="Without navbar">Without navbar</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-container.html" class="menu-link">
-                    <div data-i18n="Container">Container</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-fluid.html" class="menu-link">
-                    <div data-i18n="Fluid">Fluid</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-blank.html" class="menu-link">
-                    <div data-i18n="Blank">Blank</div>
+                  <a href="{{ route('admin.pengajuan') }}" class="menu-link">
+                    <div data-i18n="Without navbar">Data Pengajuan</div>
                   </a>
                 </li>
               </ul>
             </li>
+            @else
+            <li class="menu-item">
+              <a href="index.html" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-hash"></i>
+                <div data-i18n="Analytics">Pengajuan</div>
+              </a>
+            </li>
+            @endif
 
           </ul>
         </aside>

@@ -20,4 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::post('/register-custom', 'RegisterController@register')->name('registernew');
 Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
+Route::middleware(['auth', 'ceklevel:admin'])->group(function(){
+    Route::get('list-siswa', 'SiswaController@index')->name('admin.siswa');
+    Route::get('list-pengajuan', 'PengajuanController@index')->name('admin.pengajuan');
+});
 

@@ -20,10 +20,11 @@ class PengajuanController extends Controller
     public function printSinglePengajuan($id)
     {
         $pip = pip::where('id', $id)->with('get_user')->first();
+        $username = $pip->get_user->username;
         $no = $pip->no_pendaftaran;
         // dd($pip);
  
-    	$pdf = PDF::loadview('print.singlepengajuan',['pip'=>$pip])->setPaper('a4', 'landscape');
+    	$pdf = PDF::loadview('print.singlepengajuan',['pip'=>$pip, 'username' => $username])->setPaper('a4', 'landscape');
     	return $pdf->download("laporan-pengajuan-$no.pdf");
     }
 

@@ -49,7 +49,7 @@
                             <p class="card-text">{{$item->catatan}}</p>
                         </div>
                         <div class="col-lg-4 col-md-6">
-                            <small class="text-light fw-semibold">YouTube Video</small>
+                            <small class="text-light fw-semibold">Foto KIP</small>
                             <div class="mt-3">
                               <button
                                 type="button"

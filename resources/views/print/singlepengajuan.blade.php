@@ -13,7 +13,7 @@
 	</style>
 	<center>
 		<h5>Laporan Pengajuan Siswa Program Indonesia Pintar - {{ $username }}</h4>
-		<h6><a target="_blank" href="https://www.smkn11.bandung.sch.id">www.smkn11.bandung.sch.id</a></h5>
+		<h6><a target="_blank" href="https://www.smkinsanmandiri-kbb.sch.id/">www.smkinsanmandiri-kbb.sch.id</a></h5>
 	</center>
  
 	<table class='table table-bordered'>

@@ -17,7 +17,7 @@
           <div class="card-body">
             <div class="d-flex align-items-start align-items-sm-center gap-4">
               <img
-                src="https://hadiryuk.id/img/icon/admin.png"
+                src="https://lh4.googleusercontent.com/BxVctcd89WmpbbFbO8jZytEkCwNoMJReUalVcw-fR62wuup7xdJKOhIC2LrpVt3RSmGN5e7tc_Z-Xy8dGqn6Ujo=w16383"
                 alt="user-avatar"
                 class="d-block rounded"
                 height="100"

@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="p-3 text-center">
-                        <img src="https://upload.wikimedia.org/wikipedia/id/1/12/Logo_Persib.png" width="80" />
+                        <img src="https://lh4.googleusercontent.com/BxVctcd89WmpbbFbO8jZytEkCwNoMJReUalVcw-fR62wuup7xdJKOhIC2LrpVt3RSmGN5e7tc_Z-Xy8dGqn6Ujo=w16383" width="80" />
                     </div>
                     <form method="POST" action="{{ route('login') }}" class="mt-4">
                         @csrf

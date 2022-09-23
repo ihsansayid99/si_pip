@@ -30,4 +30,8 @@ class User extends Authenticatable
     public function get_siswa(){
         return $this->belongsTo('App\Siswa', 'id_siswa', 'id');
     }
+
+    public function get_pip(){
+        return $this->hasMany('App\pip', 'id_user', 'id');
+    }
 }

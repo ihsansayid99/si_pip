@@ -141,8 +141,8 @@
 
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
-            <li class="menu-item active">
-              <a href="index.html" class="menu-link">
+            <li class="menu-item {{ (request()->is('/')) ? 'active' : '' }}">
+              <a href="{{ route('home') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
@@ -150,19 +150,19 @@
 
             <!-- Layouts -->
             @if(Auth::user()->role == 'admin')
-            <li class="menu-item">
+            <li class="menu-item {{ ( request()->is('list-siswa') || request()->is('list-pengajuan') ) ? 'active open' : '' }}">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
                 <div data-i18n="Layouts">Data Master</div>
               </a>
 
               <ul class="menu-sub">
-                <li class="menu-item">
+                <li class="menu-item {{ (request()->is('list-siswa')) ? 'active' : '' }}">
                   <a href="{{ route('admin.siswa') }}" class="menu-link">
                     <div data-i18n="Without menu">Data Siswa</div>
                   </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item {{ (request()->is('list-pengajuan')) ? 'active' : '' }}">
                   <a href="{{ route('admin.pengajuan') }}" class="menu-link">
                     <div data-i18n="Without navbar">Data Pengajuan</div>
                   </a>
@@ -170,8 +170,8 @@
               </ul>
             </li>
             @else
-            <li class="menu-item">
-              <a href="index.html" class="menu-link">
+            <li class="menu-item {{ (request()->is('pengajuan/program')) ? 'active' : '' }}">
+              <a href="{{ route('siswa.pengajuan') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-hash"></i>
                 <div data-i18n="Analytics">Pengajuan</div>
               </a>
@@ -204,7 +204,7 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                      <img src="https://hadiryuk.id/img/icon/admin.png" alt class="w-px-40 h-auto rounded-circle" />
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -213,7 +213,7 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-                              <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                              <img src="https://hadiryuk.id/img/icon/admin.png" alt class="w-px-40 h-auto rounded-circle" />
                             </div>
                           </div>
                           <div class="flex-grow-1">
@@ -228,7 +228,7 @@
                     </li>
                     <li>
                       @if(Auth::user()->role == 'siswa')
-                      <a class="dropdown-item" href="#">
+                      <a class="dropdown-item" href="{{ route('siswa.profile') }}">
                         <i class="bx bx-user me-2"></i>
                         <span class="align-middle">My Profile</span>
                       </a>

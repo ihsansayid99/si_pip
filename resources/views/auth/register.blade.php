@@ -16,7 +16,7 @@
 
                             <div class="col-md-12">
                                 <label for="nisn" class="col-form-label text-md-right">{{ __('Nomor Induk Siswa Nasional') }}</label>
-                                <input id="nisn" type="text" class="form-control @error('nisn') is-invalid @enderror" name="nisn" value="{{ old('nisn') }}" required autocomplete="nisn">
+                                <input id="nisn" type="text" class="form-control @error('nisn') is-invalid @enderror" name="nisn" value="{{ old('nisn') }}" required autocomplete="nisn" autofocus>
 
                                 @error('nisn')
                                 <span class="invalid-feedback" role="alert">
@@ -30,7 +30,7 @@
 
                             <div class="col-md-12">
                                 <label for="nama_lengkap" class="col-form-label text-md-right">{{ __('Nama Lengkap') }}</label>
-                                <input id="nama_lengkap" type="text" class="form-control @error('nama_lengkap') is-invalid @enderror" name="nama_lengkap" value="{{ old('nama_lengkap') }}" required autocomplete="nama_lengkap" autofocus>
+                                <input id="nama_lengkap" type="text" class="form-control @error('nama_lengkap') is-invalid @enderror" name="nama_lengkap" value="{{ old('nama_lengkap') }}" required autocomplete="nama_lengkap">
 
                                 @error('nama_lengkap')
                                 <span class="invalid-feedback" role="alert">
